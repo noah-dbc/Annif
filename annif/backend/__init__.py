@@ -27,6 +27,14 @@ def _fasttext() -> Type[AnnifBackend]:
         return fasttext.FastTextBackend
     except ImportError:
         raise ValueError("fastText not available, cannot use fasttext backend")
+    
+def _gensim() -> Type[AnnifBackend]:
+    try:
+        from . import gensim
+
+        return gensim.GensimBackend
+    except ImportError:
+        raise ValueError("gensim not available, cannot use gensim backend")
 
 
 def _http() -> Type[AnnifBackend]:
@@ -102,6 +110,7 @@ _backend_fns = {
     "dummy": _dummy,
     "ensemble": _ensemble,
     "fasttext": _fasttext,
+    "gensim": _gensim,
     "http": _http,
     "mllm": _mllm,
     "nn_ensemble": _nn_ensemble,
