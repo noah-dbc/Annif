@@ -130,8 +130,8 @@ class GensimBackend(backend.AnnifBackend):
         res = dict(subjects_dict)
         res = [(s, res[s]) for s in sorted(res, key=res.get, reverse=True)[:limit]]
         # normalize, so that values sum up to 1
-        norm_val = 1 / sum([v for _, v in res.items()])
-        return {s: v * norm_val for s, v in res.items()}
+        norm_val = 1 / sum([v for _, v in res])
+        return {s: v * norm_val for s, v in res}
 
 
     def _suggest(self, article_text: str, params: dict[str, Any]) -> Iterator:
