@@ -4,9 +4,15 @@ from __future__ import annotations
 import abc
 import collections
 from itertools import islice
+from dataclasses import dataclass
+from .subject import SubjectSet
 
-Document = collections.namedtuple("Document", "text subject_set")
+#Document = collections.namedtuple("Document", "text subject_set")
 
+@dataclass(frozen=True)
+class Document:
+    text: str
+    subject_set: SubjectSet | None
 
 class DocumentCorpus(metaclass=abc.ABCMeta):
     """Abstract base class for document corpora"""
