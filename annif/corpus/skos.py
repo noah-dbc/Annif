@@ -13,7 +13,7 @@ from rdflib.namespace import OWL, RDF, RDFS, SKOS
 import annif.util
 
 from .types import SubjectCorpus
-from annif.types import Subject
+from annif.basictypes import Subject
 
 if TYPE_CHECKING:
     from collections.abc import Iterator, Sequence

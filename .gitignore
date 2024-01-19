@@ -13,3 +13,5 @@ poetry.lock
 projects.cfg
 venv/
 .hypothesis/
+.idea/
+.ipynb_checkpoints/

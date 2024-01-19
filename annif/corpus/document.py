@@ -12,7 +12,7 @@ import annif.util
 
 from .subject import SubjectSet
 from .types import DocumentCorpus
-from annif.types import Document
+from annif.basictypes import Document
 
 if TYPE_CHECKING:
     from collections.abc import Iterator

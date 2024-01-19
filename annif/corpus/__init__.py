@@ -11,8 +11,8 @@ from .document import (
 )
 from .skos import SubjectFileSKOS
 from .subject import SubjectFileCSV, SubjectFileTSV, SubjectIndex, SubjectSet
-from annif.types import Document
-from annif.types import Subject
+from annif.basictypes import Document
+from annif.basictypes import Subject
 
 __all__ = [
     "DocumentDirectory",

@@ -9,7 +9,7 @@ import connexion
 
 import annif.registry
 from annif.corpus import DocumentList, SubjectSet
-from annif.types import Document
+from annif.basictypes import Document
 from annif.exception import AnnifException
 from annif.project import Access
 

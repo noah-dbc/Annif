@@ -11,7 +11,7 @@ if TYPE_CHECKING:
     from typing import Callable
 
     from annif.corpus import SubjectSet
-    from annif.types import Document
+    from annif.basictypes import Document
     from annif.registry import AnnifRegistry
     from annif.suggestion import SuggestionBatch, SuggestionResult
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 import abc
 import collections
 from itertools import islice
-from annif.types import Document
+from annif.basictypes import Document
 
 
 class DocumentCorpus(metaclass=abc.ABCMeta):
