@@ -1,4 +1,4 @@
-"""Clases for supporting document corpora"""
+"""Classes for supporting document corpora"""
 from __future__ import annotations
 
 import glob
@@ -11,7 +11,8 @@ from typing import TYPE_CHECKING
 import annif.util
 
 from .subject import SubjectSet
-from .types import Document, DocumentCorpus
+from .types import DocumentCorpus
+from annif.types import Document
 
 if TYPE_CHECKING:
     from collections.abc import Iterator

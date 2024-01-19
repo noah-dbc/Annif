@@ -8,7 +8,8 @@ from typing import TYPE_CHECKING, Any
 import connexion
 
 import annif.registry
-from annif.corpus import Document, DocumentList, SubjectSet
+from annif.corpus import DocumentList, SubjectSet
+from annif.types import Document
 from annif.exception import AnnifException
 from annif.project import Access
 
@@ -27,7 +28,7 @@ def project_not_found_error(project_id: str) -> ConnexionResponse:
     return connexion.problem(
         status=404,
         title="Project not found",
-        detail="Project '{}' not found".format(project_id),
+        detail=f"Project '{project_id}' not found",
     )
 
 

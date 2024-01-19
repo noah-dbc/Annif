@@ -10,8 +10,9 @@ from .document import (
     TransformingDocumentCorpus,
 )
 from .skos import SubjectFileSKOS
-from .subject import Subject, SubjectFileCSV, SubjectFileTSV, SubjectIndex, SubjectSet
-from .types import Document
+from .subject import SubjectFileCSV, SubjectFileTSV, SubjectIndex, SubjectSet
+from annif.types import Document
+from annif.types import Subject
 
 __all__ = [
     "DocumentDirectory",

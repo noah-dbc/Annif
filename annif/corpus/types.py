@@ -4,8 +4,7 @@ from __future__ import annotations
 import abc
 import collections
 from itertools import islice
-
-Document = collections.namedtuple("Document", "text subject_set")
+from annif.types import Document
 
 
 class DocumentCorpus(metaclass=abc.ABCMeta):
@@ -25,10 +24,10 @@ class DocumentCorpus(metaclass=abc.ABCMeta):
         objects."""
         it = iter(self.documents)
         while True:
-            docs_batch = list(islice(it, self.DOC_BATCH_SIZE))
-            if not docs_batch:
+            if docs_batch := list(islice(it, self.DOC_BATCH_SIZE)):
+                yield docs_batch
+            else:
                 return
-            yield docs_batch
 
     def is_empty(self) -> bool:
         """Check if there are no documents to iterate."""
@@ -37,9 +36,6 @@ class DocumentCorpus(metaclass=abc.ABCMeta):
             return False
         except StopIteration:
             return True
-
-
-Subject = collections.namedtuple("Subject", "uri labels notation")
 
 
 class SubjectCorpus(metaclass=abc.ABCMeta):

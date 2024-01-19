@@ -9,7 +9,8 @@ import annif
 import annif.util
 
 from .skos import serialize_subjects_to_skos
-from .types import Subject, SubjectCorpus
+from .types import SubjectCorpus
+from annif.types import Subject
 
 if TYPE_CHECKING:
     from collections.abc import Generator, Iterator

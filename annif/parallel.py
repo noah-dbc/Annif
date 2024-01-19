@@ -10,7 +10,8 @@ if TYPE_CHECKING:
     from collections.abc import Iterator
     from typing import Callable
 
-    from annif.corpus import Document, SubjectSet
+    from annif.corpus import SubjectSet
+    from annif.types import Document
     from annif.registry import AnnifRegistry
     from annif.suggestion import SuggestionBatch, SuggestionResult
 
